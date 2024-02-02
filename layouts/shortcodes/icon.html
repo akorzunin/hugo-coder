@@ -1,2 +1,2 @@
-{{$svg := .Get 0}}
+{{ $svg := printf "static/icons/%s" (.Get 0) }}
 {{ $svg | readFile | safeHTML }}

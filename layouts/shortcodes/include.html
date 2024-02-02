@@ -1,2 +1,2 @@
-{{ $file := .Get 0 }}
-{{ (printf "%s%s" .Page.File.Dir $file) | readFile | replaceRE "^---[\\s\\S]+?---" "" | safeHTML }}
+{{ $p := site.GetPage (.Get 0) }}
+{{ $p.RenderShortcodes }}
