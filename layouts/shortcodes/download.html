@@ -1,0 +1,7 @@
+{{ $dir := .Get "dir" }}
+{{ $locale := .Get "locale" }}
+{{ $mdLink := printf "/cv/files/%s/resume%s.md" $dir $locale }}
+{{ $pdfLink := printf "/cv/files/%s/resume%s.pdf" $dir $locale }}
+
+[md version]({{ $mdLink }})&nbsp;|
+[pdf version]({{ $pdfLink }})
